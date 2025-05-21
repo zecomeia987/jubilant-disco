@@ -1,84 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impacto do Desmatamento</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Florestas em Perigo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1614550349678-70468b7b058f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .problem-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .consequence-item::before {
+            content: "•";
+            color: #10b981;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    </style>
 </head>
-
-<body>
-    <header>
-        <h1>Impacto do Desmatamento</h1>
-        <div class="image-container">
-            <img src="cataratas.jpeg"
-                alt="Foto das Cataratas do Iguaçu, um lugar com muitas árvores e mata nativa preservada.">
+<body class="font-sans bg-gray-50 text-gray-800">
+    <header class="hero-image text-white py-20 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Florestas em Perigo</h1>
+            <p class="text-xl mb-8">O desmatamento está transformando nosso planeta, ameaçando ecossistemas e comprometendo nosso futuro.</p>
+            <nav class="flex justify-center space-x-4 md:space-x-8">
+                <a href="#problemas" class="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition">Os Problemas</a>
+                <a href="#consequencias" class="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition">Consequências</a>
+                <a href="#solucoes" class="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition">Soluções</a>
+            </nav>
         </div>
-        <p>O desmatamento intensifica fenômenos negativos no meio ambiente e na vida das pessoas, afetando enchentes, temperatura e qualidade de vida.</p>
-        <nav>
-            <ul>
-                <li><a href="#problemas">Os Problemas</a></li>
-                <li><a href="#consequencias">Consequências</a></li>
-                <li><a href="#conclusao">Conclusão</a></li>
-            </ul>
-        </nav>
     </header>
 
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        <section id="problemas" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-green-800">Os Desafios que Enfrentamos</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="problem-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden rounded-t-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80" 
+                             alt="Enchente em área urbana" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-green-700">Inundações Catastróficas</h3>
+                    <p class="text-gray-600">Sem as raízes das árvores para absorver água, as chuvas intensas transformam-se rapidamente em enchentes devastadoras, destruindo comunidades inteiras.</p>
+                </article>
 
-    <main>
-        <section id="problemas" class="conteudo">
-            <h2>Os Problemas</h2>
-            <article>
-                <h3>Aumento das enchentes</h3>
-                <p>As árvores absorvem a água da chuva e ajudam na infiltração no solo. Sem vegetação, a água escoa rapidamente, causando
-                    enchentes.</p>
-            </article>
+                <article class="problem-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden rounded-t-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1569335468889-e92a42236e0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Cidade com calor extremo" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-green-700">Temperaturas Extremas</h3>
+                    <p class="text-gray-600">As florestas regulam o clima. Sua destruição cria ilhas de calor urbanas, onde as temperaturas podem ser até 10°C mais altas que nas áreas verdes.</p>
+                </article>
 
-            <article>
-                <h3>Calor excessivo e ilhas de calor</h3>
-                <p>O desmatamento reduz a evapotranspiração das plantas, elevando a temperatura das cidades e aumentando o efeito das ilhas
-                    de calor.</p>
-            </article>
+                <article class="problem-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden rounded-t-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Pessoa com máscara em cidade poluída" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-green-700">Saúde em Risco</h3>
+                    <p class="text-gray-600">A perda de áreas verdes aumenta a poluição, agrava doenças respiratórias e reduz nosso bem-estar mental, criando cidades menos saudáveis.</p>
+                </article>
+            </div>
 
-            <article>
-                <h3>Redução da qualidade de vida</h3>
-                <p>A destruição das florestas impacta a biodiversidade, aumenta a poluição e reduz o contato com áreas verdes, afetando a
-                    saúde mental e respiratória.</p>
-            </article>
-
-            <a href="https://www.youtube.com/watch?v=ILh7nDEKGqc&pp=ygUXSW1wYWN0byBkbyBEZXNtYXRhbWVudG8%3D" class="cta-button" target="_blank">Como impacta o mundo? <i
-                    class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-color);"></i></a>
+            <div class="text-center mt-10">
+                <a href="https://www.youtube.com/watch?v=ILh7nDEKGqc" 
+                   class="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition"
+                   target="_blank">
+                    Veja o impacto global <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+            </div>
         </section>
 
-        <section id="consequencias" class="conteudo">
-            <h2>Consequências</h2>
-            <ul>
-                <li>Aumento das enchentes e erosão do solo</li>
-                <li>Aumento das temperaturas e mudanças climáticas</li>
-                <li>Perda da biodiversidade</li>
-                <li>Redução da qualidade de vida nas cidades</li>
-                <li>Agravamento de problemas de saúde</li>
-                <li>Impacto na economia de comunidades locais</li>
-            </ul>
+        <section id="consequencias" class="mb-20 bg-green-50 p-8 rounded-xl">
+            <h2 class="text-3xl font-bold text-center mb-10 text-green-800">Consequências do Desmatamento</h2>
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <ul class="space-y-4">
+                    <li class="consequence-item text-lg pl-5">Extinção de espécies - 137 espécies desaparecem diariamente</li>
+                    <li class="consequence-item text-lg pl-5">Aumento de 30% nas emissões de CO₂ globais</li>
+                    <li class="consequence-item text-lg pl-5">Desertificação de áreas antes férteis</li>
+                    <li class="consequence-item text-lg pl-5">Escassez hídrica em regiões críticas</li>
+                </ul>
+                <ul class="space-y-4">
+                    <li class="consequence-item text-lg pl-5">Aumento de doenças zoonóticas como COVID-19</li>
+                    <li class="consequence-item text-lg pl-5">Perda de US$ 4,5 trilhões anuais em serviços ecossistêmicos</li>
+                    <li class="consequence-item text-lg pl-5">Migrações climáticas em massa</li>
+                    <li class="consequence-item text-lg pl-5">Redução de 50% na produtividade agrícola</li>
+                </ul>
+            </div>
+            <div class="mt-10 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1614550349678-70468b7b058f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                     alt="Floresta desmatada" class="rounded-lg shadow-lg max-w-full h-auto">
+            </div>
         </section>
 
-        <section id="conclusao" class="conteudo">
-            <h2>Conclusão</h2>
-            <p>O desmatamento impacta diretamente a vida humana. Para evitar suas consequências, é necessário preservar o meio ambiente,
-                investir em reflorestamento e adotar práticas sustentáveis.</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ILh7nDEKGqc?si=feol6sZCHo1Cg-jQ" title="YouTube video.">
+        <section id="solucoes" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-green-800">Como Podemos Mudar</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-4xl mx-auto">
+                <div class="md:flex">
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Pessoas plantando árvores" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 md:w-1/2">
+                        <h3 class="text-2xl font-bold mb-4 text-green-700">Ação Coletiva para um Futuro Verde</h3>
+                        <p class="text-gray-600 mb-6">A restauração de ecossistemas não é apenas possível - é essencial. Cada árvore plantada, cada política de conservação implementada, nos aproxima de um planeta mais saudável.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Consumo consciente de produtos florestais</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Apoio a projetos de reflorestamento</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Pressão por políticas ambientais eficazes</span>
+                            </li>
+                        </ul>
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe class="w-full rounded-lg" height="315" src="https://www.youtube.com/embed/ILh7nDEKGqc?si=feol6sZCHo1Cg-jQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-
     </main>
 
-    <footer>
-        <a href="https://www.linkedin.com/in/femascheti" class="cta-footer">Faça parte dessa causa!</a>
-        <p>2025 | @femascheti</p>
+    <footer class="bg-green-800 text-white py-10 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+               class="inline-block px-6 py-3 bg-white text-green-800 rounded-lg font-bold mb-6 hover:bg-gray-100 transition"
+               target="_blank">
+                Junte-se ao Movimento <i class="fas fa-hands-helping ml-2"></i>
+            </a>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="hover:text-green-200"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="hover:text-green-200"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="hover:text-green-200"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="#" class="hover:text-green-200"><i class="fab fa-linkedin-in text-xl"></i></a>
+            </div>
+            <p class="text-green-200">© 2025 Florestas em Perigo | Criado por Matheus</p>
+            <p class="text-sm mt-2 text-green-300">Todas as imagens utilizadas são de domínio público ou licenciadas para uso livre</p>
+        </div>
     </footer>
 </body>
-
 </html>
