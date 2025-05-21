@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Rakkas&display=swap');
+
+/* Variáveis */
+:root {
+    --primary-color: #026773;
+    --secondary-color: #3CA6A6;
+    --text-color: #F2E3D5;
+    --background-color: #204A4F;
+    --button-hover: #012E40;
+    --font-body: "Chocolate Classical Sans", serif;
+    --font-titulo: "Rakkas", serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-body);
+}
+
+/* Body Styles */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 4.6;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.image-container {
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px auto 20px;
+    /* max-width: 600px;  Let's remove this limit for now */
+    width: 40%; /* Occupy 80% of the header's width */
+    max-height: 400px; /* Added a maximum height */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+}
+
+header p {
+    font-size: 1.1em;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: var(--button-hover);
+}
+
+/* Main Content Styles */
+main {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.conteudo {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    color: #333;
+}
+
+.conteudo h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.conteudo h3 {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.conteudo p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    width: 80%;
+    margin: 0 auto 20px auto;
+}
+
+.cta-footer {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-footer:hover {
+    text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    main {
+        width: 90%;
+    }
+
+    .conteudo {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .cta-button {
+        width: 100%;
+    }
+}
